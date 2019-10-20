@@ -1,0 +1,103 @@
+body{
+  height: 100vh;
+  background: linear-gradient(to top right, #0066ff 0%, #ff99cc 90%)
+}
+.login{
+  width: 360px;
+  padding:10% 0 0;
+  margin: auto;
+
+}
+
+.form{
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+   border-radius:12px;
+ box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* height: 100%; */
+}
+.form input{
+  font-family: "Roboto",sans-serif;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  font-size: 14px;
+
+}
+
+.form button{
+  /* border-radius: 20px; */
+  border:0px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding:15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+
+}
+.form button:hover,.form button:active{
+  background: #43A047;
+}
+.form .message{
+  margin: 15px 0 0;
+  color: blue;
+  font-size: 14px;
+}
+.form .message a{
+  color:#4CAF50;
+  text-decoration: none;
+}
+.form .register{
+  display: none;
+}
+span{
+  color: red;
+  font-size: 12px;
+  text-align: right;
+  /* align-text:left;  */
+}
+@media(max-width:1000px)
+{
+  .login{
+    align:center;
+    width: :100px;
+  }
+}
+#btn{
+  border:0px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding:15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+}
+.shein{
+  height: 60px;
+  /* background-image: linear-gradient(to bottom right, red , blue); */
+   /* background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); */
+  /* background-color: #cc66ff; */
+  /* text-shadow: 2px 2px 8px #FF0000; */
+  font-size: 54px;
+  /* padding: 0px; */
+  /* height: 96px; */
+font-weight: bold;
+color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}

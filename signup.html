@@ -1,0 +1,113 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="sign.css">
+</head>
+
+<body>
+  <marquee behavior="alternate" direction="up" width="100%">
+	<marquee direction="right" behavior="alternate" class="shein">WELCOME TO SHEIN</marquee>
+</marquee>
+
+  <div class="login">
+    <div class="form">
+      <form class="register"  action="#" onsubmit="return validation()">
+
+        <input type="text" placeholder="Name" id="user" autocomplete="off"/>
+          <span id="username" style="float:left"></span>
+
+        <input type="text" placeholder="Password" id="pass" autocomplete="off"/>
+        <span id="password" style="float:left"></span>
+        <input type="text" placeholder="Email Id" id="email" autocomplete="off"/>
+        <span id="emailid" style="float:left"></span>
+
+        <input type="submit" value="Create" id="btn"/>
+        <p class="message">Already Registerd?<a href="#">Login</a></p>
+      </form>
+
+
+      <form class="login-form">
+        <input type="text" id="user" placeholder="User Name" />
+          <input type="password" placeholder="Password"/>
+          <button>login</button>
+          <p class="message">Not Registerd?<a href="#">Register</a></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="jquery.js">
+  </script>
+  <script>
+  $('.message a').click(function(){
+    $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+  });
+  </script>
+  <script>
+  function validation()
+  {
+    var user=document.getElementById("user").value;
+    var pass=document.getElementById("pass").value;
+    var email=document.getElementById("email").value;
+    var correct=/^[A-Za-z]+$/;
+    var passw=  /^[A-Za-z]\w{7,14}$/;
+    if(user=="")
+    {
+       document.getElementById("username").innerHTML=" *Please fill the username field";
+
+
+      return false;
+    }
+
+    if((user.length <=2) || (user.length>20))
+    {
+     document.getElementById("username").innerHTML=" *User Length must be between 2 and 20";
+        // alert("Please fill the username field");
+        return false;
+    }
+    if(!(user.match(correct))){
+      document.getElementById("username").innerHTML=" *Only Characters are allowed";
+     //alert("Please fill the username field");
+     return false;
+    }
+
+ if(pass=="")
+    {
+       document.getElementById("password").innerHTML=" *Please fill the Password field";
+      // alert("Please fill the username field");
+      return false;
+    }
+    if((pass.length <=6) || (user.length>15))
+    {
+     document.getElementById("password").innerHTML=" *Password Length must be between 6 and 15";
+        // alert("Please fill the username field");
+        return false;
+    }
+    if(!(pass.match(passw))){
+      document.getElementById("password").innerHTML=" *At least one upperletter,lowerletter and a number";
+     return false;
+    }
+  if(email=="")
+    {
+       document.getElementById("emailid").innerHTML=" *Please fill the Email field";
+      // alert("Please fill the username field");
+      return false;
+    }
+    if(email.indexOf('@')<=0)
+    {
+      document.getElementById("emailid").innerHTML=" *@ invalid position";
+     // alert("Please fill the username field");
+     return false;
+    }
+    if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.'))
+    {
+      document.getElementById("emailid").innerHTML="* . invalid position";
+
+     return false;
+    }
+    // return (true);
+
+  }
+
+  </script>
+</body>
+</html>
